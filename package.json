@@ -1,6 +1,6 @@
 {
   "name": "@axihe/snowflake",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "SnowFlake 算法，按照推特的5+5方案实现的",
   "main": "index.js",
   "directories": {

@@ -9,23 +9,30 @@
 ## 安装
 
 ```
-npm install snow-flake -save
+npm install @axihe/snowflake --save
 ```
 
 ## 使用方法
 
 
 ```
-var idWorker = require("../index");
-let id = idWorker.nextId();//45386714578944n
-```
+var Snowflake = require("@axihe/snowflake");
+var config = {
+    worker_id: 0,
+    datacenter_id: 0
+}
+const idWorker = new Snowflake(config.worker_id, config.datacenter_id);
 
+//需要生成的时候，使用 `.nextId()` 方法
+let id = idWorker.nextId();
+
+// 10123248356294656n 10123248356294656
+console.log(id, id.toString());
+```
 
 worker_id 是 `0-31`的机器ID（用来配置分布式的多机器，最多支持32个机器）
 
 datacenter_id 是 `0-31`的数据ID（用来配置某个机器下面的某某服务，每台机器最多支持32个服务）
-
-之所以需要手动配置，是防止使用者误操作（没有做配置，会报错提醒你设置）；
 
 配置完以后，如下操作，返回是Bigint类型的ID
 
