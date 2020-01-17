@@ -1,0 +1,24 @@
+{
+  "name": "@axihe/snowflake",
+  "version": "1.0.1",
+  "description": "SnowFlake 算法，按照推特的5+5方案实现的",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axihe/snowflake.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axihe/snowflake/issues"
+  },
+  "homepage": "https://github.com/axihe/snowflake#readme"
+}
